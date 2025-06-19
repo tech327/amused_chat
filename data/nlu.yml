@@ -1,0 +1,121 @@
+version: "3.1"
+
+
+nlu:
+- intent: greet
+  examples: |
+    - hello
+    - hi
+    - hey
+    - good morning
+    - good evening
+    - hey there
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you
+    - talk to you later
+    - thank you
+    - ok 
+
+- intent: ask_event
+  examples: |
+    - what are the events in May?
+    - is there any music event in Delhi?
+    - are there any events between 15 June to 30 June?
+    - show me tech events in Bangalore
+    - events happening this weekend
+    - upcoming food events
+    - art events next month
+    - concerts in Mumbai in July
+    - is there any events thhes week 
+    -show me events next month
+    - what are the events in May?
+    - is there any music event in Delhi?
+    - are there any events between 15 June to 30 June?
+    - show me tech events in Bangalore
+    - events happening this weekend
+    - upcoming food events
+    - art events next month
+    - concerts in Mumbai in July
+    - is there any events this week
+    - show me events next month
+    - are there any events tomorrow?
+    - what events are happening tonight?
+    - music shows this Friday
+    - events in Delhi this Sunday
+    - workshops in August in Hyderabad
+    - seminars happening next weekend
+    - food festivals in Kolkata
+    - art exhibitions in October
+    - any events today?
+    - list music events near me
+    - tell me about weekend events
+    - tech meetups in September
+    - food events this evening
+    - concerts next month
+    - cultural programs in November
+    - any live shows this week?
+    - events near Pune this month
+    - yoga sessions in March
+    - educational events this Saturday
+    - fashion shows in Bangalore
+    - stand-up comedy shows in Delhi
+    - open mic events happening soon
+    - what’s happening in Mumbai this week?
+    - events in Chennai in December
+    - gaming events this month
+    - business conferences in January
+    - poetry events in Lucknow
+    - what events are planned for June?
+    - nightlife events this weekend
+    - parties happening on 31st Dec
+    - events in Jaipur this weekend
+    - shows in Goa in April
+    - tell me all upcoming music events
+    - any art events on Saturday?
+    - upcoming events this quarter
+    - events between 10th and 20th August
+    - what events are on Diwali?
+    - is there anything happening on New Year?
+    - kids events next week
+    - career fairs happening soon
+    - startup events this week
+    - local events in my area
+    - top events happening this month
+    - can you show me some events for families?
+
+- intent: ask_general_info
+  examples: |
+    - what happens in Holi events?
+    - tell me about Holi celebrations
+    - how do people celebrate Holi?
+    - what is done in music events?
+    - what usually happens at educational events?
+    - how are tech events organized?
+    - what can I expect from an art event?
+    - what food is there at food events?
+    - how to add a new event?
+    - how can I create an event?
+    - what are the steps to submit an event?
+    - can I register my event?
+    - what are the parameters required to add an event?
+
+
+- intent: affirm
+  examples: |
+    - yes
+    - of course
+    - sure
+    - definitely
+    - yeah
+
+- intent: deny
+  examples: |
+    - no
+    - not really
+    - I don't think so
+    - nope
+

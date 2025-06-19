@@ -1,0 +1,35 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - ask_event
+  - ask_general_info
+  - affirm
+  - deny
+
+actions:
+  - action_fetch_event_data
+  - action_general_info
+  - action_fallback
+ 
+
+responses:
+  utter_greet:
+    - text: "Hello! I’m your event assistant. Ask me about events or how to add them!"
+
+  utter_goodbye:
+    - text: "Thanks for using our service. Goodbye!"
+
+  
+  utter_default:
+    - text: |
+        I'm sorry, I didn't understand that.
+        Could you rephrase it?
+
+        Try something like:
+        • Show events happening in June
+        • Events between 5th and 10th July
+        • Music shows next month 🎶
+
+
