@@ -1,17 +1,14 @@
 FROM rasa/rasa:3.6.16
 
-# ✅ Use Rasa's virtual environment to avoid system-level conflicts
+# Use Rasa's internal venv
 ENV PATH="/opt/venv/bin:$PATH"
 
 WORKDIR /app
 
 COPY . /app
 
-# ✅ Install packages using --user to avoid permission denied errors
-RUN pip install --no-cache-dir --user -r requirements.txt
+# ✅ Install Python packages even if it needs to override system packages
+RUN pip install --no-cache-dir --break-system-packages -r requirements.txt
 
-# ✅ (Important) Ensure Python can find the user-installed packages
-ENV PYTHONPATH="/root/.local/lib/python3.10/site-packages"
-
-# Start the Rasa server
+# Launch Rasa API server
 ENTRYPOINT ["rasa", "run", "--enable-api", "--cors", "*", "--port", "8000"]
