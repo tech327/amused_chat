@@ -7,8 +7,8 @@ WORKDIR /app
 
 COPY . /app
 
-# ✅ Install Python packages even if it needs to override system packages
-RUN pip install --no-cache-dir --break-system-packages -r requirements.txt
+# ✅ Install requirements WITHOUT --user or --break-system-packages
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Launch Rasa API server
+# Launch Rasa server
 ENTRYPOINT ["rasa", "run", "--enable-api", "--cors", "*", "--port", "8000"]
