@@ -7,8 +7,8 @@ WORKDIR /app
 
 COPY . /app
 
-# ✅ Install requirements WITHOUT --user or --break-system-packages
-RUN pip install --no-cache-dir -r requirements.txt
+# Force reinstall to avoid conflicts with existing packages
+RUN pip install --no-cache-dir --force-reinstall -r requirements.txt
 
 # Launch Rasa server
 ENTRYPOINT ["rasa", "run", "--enable-api", "--cors", "*", "--port", "8000"]
